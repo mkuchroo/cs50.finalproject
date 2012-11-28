@@ -4,6 +4,6 @@
         require("../includes/config.php"); 
 
     // render portfolio
-    render("homepage.php", ["title" => "Harvard Cricket"]);
+    render("homepage_login.php");
 
 ?>

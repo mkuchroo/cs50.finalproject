@@ -16,7 +16,7 @@
     define("PASSWORD", "crimson");
 
     // your database's server
-    define("SERVER", "project");
+    define("SERVER", "project"); 
 
     // your database's username
     define("USERNAME", "jharvard");
