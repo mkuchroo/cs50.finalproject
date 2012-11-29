@@ -20,7 +20,7 @@
         $rows = query("SELECT * FROM users WHERE username = ?", $_POST["username"]);
 
         // if we found user, check password
-       // if (count($rows) == 1)
+        //if (count($rows) == 0) GETTING ERROR HERE WHEN USERNAME AND PASSWORD NOT CORRECT, HELP!
         {
             // first (and only) row
             $row = $rows[0];
@@ -37,6 +37,8 @@
                 // redirect to portfolio
                 redirect("homepage_login.php");
             }
+            else
+                apologize("Sorry, username and password not registered");
         }
      }
     else

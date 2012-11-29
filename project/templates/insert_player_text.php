@@ -25,7 +25,7 @@
             <input class="input-small" name="4s" placeholder="4s" type="text"/>
         </div>
         <div class="control-group">
-            <input class="input-small" name="6" placeholder="6s" type="text"/>
+            <input class="input-small" name="6s" placeholder="6s" type="text"/>
         </div>
         <div class="control-group">
             <input class="input-small" name="bowl_overs" placeholder="Overs Bowled" type="text"/>
