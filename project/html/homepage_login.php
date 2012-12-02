@@ -12,4 +12,8 @@
     {
         redirect("insert_player.php");
     }
+    else if ($_SERVER["REQUEST_METHOD"] == "score")
+    {
+        redirect("insert_teams_scorecard.php");
+    }
 ?>

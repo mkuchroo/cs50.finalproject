@@ -1,6 +1,13 @@
 <html>
 
+<ul class="nav nav-pills">
 
+    <li><a href="insert_player.php">Insert Player</a></li>
+    <li><a href="insert_teams_scorecard.php">Insert Scorecard</a></li>
+
+</ul>
+
+<body>
 <form action="insert_player.php" method="post">
     <fieldset>
         <div class="control-group">
