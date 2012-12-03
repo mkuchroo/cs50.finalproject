@@ -15,19 +15,20 @@
         <script src="js/jquery-1.8.2.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/scripts.js"></script>
+        
+        <div class="container-fluid">
+ 
+        <div id="top">
+            <a href="/"><img alt="Harvard Cricket" src="img/logo.gif"/></a>
+        </div>
+
+        <div id="middle">
 
     </head>
 
 
     <body>
     
-            <div class="container-fluid">
-
-            <div id="top">
-                <a href="/"><img alt="Harvard Cricket" src="img/logo.gif"/></a>
-            </div>
-
-            <div id="middle">
 
 <ul class="nav nav-pills">
     <li><a href="about.php">About Cricket</a></li>
@@ -39,6 +40,7 @@
     <li><a href="login.php"><strong>Log In</strong></a></li>
 </ul>
 
+    </body>
 
 
 
