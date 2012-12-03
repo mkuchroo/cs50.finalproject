@@ -21,8 +21,10 @@
                 <div class="control-group">
                     <select name="first_bat">
                         <option value=""></option>
-                        <option value="Harvard"></option>
-                        <option value="Opposition"></option>
+                        <?php
+                            foreach($teams as $row)
+                                print("<option value= ". $row . ">" . $row . "</option>");
+                        ?>
                     </select>
                 </div>
                 <div id="top">
@@ -33,8 +35,10 @@
                 <div class="control-group">
                     <select name="ground">
                         <option value=""></option>
-                        <option value="Harvard"></option>
-                        <option value="Opposition"></option>
+                        <?php
+                            foreach($teams as $row)
+                                print("<option value= ". $row . ">" . $row . "</option>");
+                        ?>
                     </select>
                 </div>
             <fieldset>
