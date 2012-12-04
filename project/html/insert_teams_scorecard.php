@@ -25,7 +25,9 @@
     render("../templates/insert_teams_scorecard_text.php", ["players"=>$player_names, "teams" => $team_name]);
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        dump($_POST);
+       // dump($_POST);
+        if (empty($_POST["date"]))
+            apologize("Sorry! Please enter a date!");
         if (empty($_POST["first_bat"]) || empty($_POST["ground"]))
             apologize("Sorry! You must enter game details!");
         if (empty($_POST["harvard_name_1"]) || empty($_POST["harvard_name_2"]) || empty($_POST["harvard_name_3"]) || empty($_POST["harvard_name_4"]) || empty($_POST["harvard_name_5"]) 
@@ -49,9 +51,20 @@
         $harvard_team[9] = $_POST["harvard_name_9"];
         $harvard_team[10] = $_POST["harvard_name_10"];
         $harvard_team[11] = $_POST["harvard_name_11"];
+
+        //dump($_POST);
         
-        $counter = 0;
-        dump($harvard_team);
+        //$temp = query("SELECT * FROM `players` WHERE name = ?", $harvard_team[1]);
+        //dump($temp);
+        
+        $date ="";
+        $date = $_POST["date"];
+        
+        query("INSERT INTO `games`(`date`) VALUES (?)", $date);
+        query("CREATE TABLE `project`. `". $date ."` (id INT(3), name VARCHAR (255), team VARCHAR (255), batting_order INT (4),
+            runs INT (8), balls INT (8), 4s INT (4), 6s INT (4), out VARCHAR (255), out_how VARCHAR (255), bowling_order INT (4),
+            overs INT (3), dots INT (6), runs_given INT (8), wickets INT (4), wide INT (4), noball INT (4))");
+            
     }
 
 ?>

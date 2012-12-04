@@ -6,9 +6,16 @@
 
     <li><a href="insert_player.php">Insert Player</a></li>
     <li><a href="insert_teams_scorecard.php">Insert Scorecard</a></li>
+    <li><a href="insert_article.php">Insert Article</a></li>
 
 </ul>
     <body>
+
+        <form action="insert_teams_scorecard.php" method="post">
+            <fieldset>
+        <div class="control-group">
+            <input class="input-medium" name="date" placeholder="Date (MM/DD/YYYY)" type="text"/>
+        </div>
 
         <div id="top">
                 Team Batting First
@@ -16,8 +23,6 @@
 
             <div id="middle">
 
-        <form action="insert_teams_scorecard.php" method="post">
-            <fieldset>
                 <div class="control-group">
                     <select name="first_bat">
                         <option value=""></option>
@@ -57,7 +62,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                print("<option value= ".  $row . ">" . $row .  "</option>");
                         ?>
                     </select>
                 </div>
@@ -150,17 +155,12 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                print("<option value= " . $row . ">" . $row . "</option>");
                         ?>
                     </select>
                     
                 </div>
 
-            </fieldset>
-        </form>
-
-        <form action="insert_teams_scorecard.php" method="post">
-            <fieldset>
                 <div class="control-group">
                     <input class="input-medium" name="opposition" placeholder="Opposition Team Name" type="text"/>
                 </div>
@@ -202,6 +202,7 @@
                 </div>
             
             </fieldset>
+            </form>
         </div>
 
         </div>
