@@ -12,6 +12,8 @@
     {
         if (empty($_POST["name"]))
             apologize("You must provide a Name.");
+        else if (empty($_POST["number"]))
+            apologize("You must provide a number.");
         else if (empty($_POST["games"]) && !($_POST["games"] == 0))
             apologize("You must provide Games Played.");
         else if (empty($_POST["bat_runs"]) && !($_POST["bat_runs"] == 0))
@@ -40,7 +42,7 @@
             apologize("You must provide an affiliation.");
         else
         {
-            query("INSERT INTO `players` (name, games, bat_runs, bat_balls, 50s, 100s, 4s, 6s, bowl_overs, bowl_wicket, bowl_runs, bat_style, bowl_style, description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", $_POST["name"], $_POST["games"], $_POST["bat_runs"], $_POST["bat_balls"], $_POST["50s"], $_POST["100s"], $_POST["4s"], $_POST["6s"], $_POST["bowl_overs"], $_POST["bowl_wicket"], $_POST["bowl_runs"], $_POST["bat_style"], $_POST["bowl_style"], $_POST["affiliation"]);
+            query("INSERT INTO `players` (id, name, games, bat_runs, bat_balls, 50s, 100s, 4s, 6s, bowl_overs, bowl_wicket, bowl_runs, bat_style, bowl_style, description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", $_POST["number"], $_POST["name"], $_POST["games"], $_POST["bat_runs"], $_POST["bat_balls"], $_POST["50s"], $_POST["100s"], $_POST["4s"], $_POST["6s"], $_POST["bowl_overs"], $_POST["bowl_wicket"], $_POST["bowl_runs"], $_POST["bat_style"], $_POST["bowl_style"], $_POST["affiliation"]);
             redirect("/homepage_login.php");
         }
      }

@@ -14,6 +14,9 @@
             <input class="input-medium" name="name" placeholder="Full Name" type="text"/>
         </div>
         <div class="control-group">
+            <input class="input-small" name="number" placeholder="Number" type="text"/>
+        </div>
+        <div class="control-group">
             <input class="input-small" name="games" placeholder="Games" type="text"/>
         </div>
         <div class="control-group">
@@ -35,22 +38,22 @@
             <input class="input-small" name="6s" placeholder="6s" type="text"/>
         </div>
         <div class="control-group">
-            <input class="input-small" name="bowl_overs" placeholder="Overs Bowled" type="text"/>
+            <input class="input-medium" name="bowl_overs" placeholder="Overs Bowled" type="text"/>
         </div>
         <div class="control-group">
-            <input class="input-small" name="bowl_runs" placeholder="Runs Against" type="text"/>
+            <input class="input-medium" name="bowl_runs" placeholder="Runs Against" type="text"/>
         </div>
         <div class="control-group">
-            <input class="input-small" name="bowl_wicket" placeholder="Wickets Taken" type="text"/>
+            <input class="input-medium" name="bowl_wicket" placeholder="Wickets Taken" type="text"/>
         </div>
         <div class="control-group">
-            <input class="input-small" name="bat_style" placeholder="Batting Style" type="text"/>
+            <input class="input-medium" name="bat_style" placeholder="Batting Style" type="text"/>
         </div>
         <div class="control-group">
-            <input class="input-small" name="bowl_style" placeholder="Bowling Style" type="text"/>
+            <input class="input-medium" name="bowl_style" placeholder="Bowling Style" type="text"/>
         </div>
         <div class="control-group">
-            <input class="input-small" name="affiliation" placeholder="Harvard Affiliation" type="text"/>
+            <input class="input-medium" name="affiliation" placeholder="Harvard Affiliation" type="text"/>
         </div>
         <div class="control-group">
             <button type="submit" class="btn">Create</button>
