@@ -1,7 +1,5 @@
 <html>
 
-<? //dump($players); ?>
-
 <ul class="nav nav-pills">
 
     <li><a href="insert_player.php">Insert Player</a></li>
@@ -11,49 +9,66 @@
 </ul>
     <body>
 
-        <form action="insert_teams_scorecard.php" method="post">
+        <form action="creating_scorecard.php" method="post">
             <fieldset>
         <div class="control-group">
             <input class="input-medium" name="date" placeholder="Date (MM/DD/YYYY)" type="text"/>
         </div>
 
+        <div id="Header">
+                Toss
+            </div>
+
+            <div id="top-middle">
+
+                <div class="control-group">
+                    <select name="toss">
+                        <option value=""></option>
+                        <?php
+                            foreach($teams as $row)
+                                echo '<option value="'.$row.'">'.$row.'</option>';
+                        ?>
+                    </select>
+                </div>
+
+
         <div id="top">
                 Team Batting First
             </div>
 
-            <div id="middle">
+            <div id="top-middle">
 
                 <div class="control-group">
                     <select name="first_bat">
                         <option value=""></option>
                         <?php
                             foreach($teams as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
-                <div id="top">
+                <div id="middle">
                     Home Team
                 </div>
 
-            <div id="middle">
+            <div id="middle-middle">
                 <div class="control-group">
                     <select name="ground">
                         <option value=""></option>
                         <?php
                             foreach($teams as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
             <fieldset>
         <form>
 
-        <div id="top">
+        <div id="low">
                 Harvard Team
             </div>
 
-            <div id="middle">
+            <div id="low-middle">
 
         <form action="insert_teams_scorecard.php" method="post">
             <fieldset>
@@ -62,7 +77,8 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ".  $row . ">" . $row .  "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
+                                //print("<option value= "'.  $row . '">"' . $row .  '"</option>");
                         ?>
                     </select>
                 </div>
@@ -71,7 +87,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
@@ -80,7 +96,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
@@ -89,7 +105,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
@@ -98,7 +114,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
@@ -107,7 +123,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
@@ -116,7 +132,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
@@ -125,7 +141,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                 </div>
@@ -134,7 +150,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                     
@@ -145,7 +161,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= ". $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                     
@@ -155,7 +171,7 @@
                         <option value=""></option>
                         <?php
                             foreach($players as $row)
-                                print("<option value= " . $row . ">" . $row . "</option>");
+                                echo '<option value="'.$row.'">'.$row.'</option>';
                         ?>
                     </select>
                     

@@ -5,8 +5,6 @@
 
    render("../templates/insert_player_text.php");
 
-   // $test = query("SELECT * FROM `players` WHERE id = 1");
-    //dump($test);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
