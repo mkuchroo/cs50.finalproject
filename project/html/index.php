@@ -2,15 +2,15 @@
 
     // configuration
     require("../includes/config.php"); 
-?>
 
-<center><img name="foto"></center>
+?>
+    <center><img name="foto" width = "400" height = "200"></center>
 <script>
     var Pic = new Array();
 
-    Pic[0] = '../img/construction.gif'
-    Pic[1] = '../img/logo.gif'
-    Pic[2] = '../img/team_pic.gif'
+    Pic[0] = '../img/1885.jpg'
+    Pic[1] = '../img/watermarked.jpg'
+    Pic[2] = '../img/team_pic.jpg'
 
     var t;
     var j = 0;
@@ -22,6 +22,8 @@
         preLoad[i].src = Pic[i];
     }
     
+    
+    
     //all images are loaded on client
     index = 0;
     function update(){
@@ -32,7 +34,7 @@
     }
 
     }
-</script>
+    </script>
 
 <?php
     // render portfolio

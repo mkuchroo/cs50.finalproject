@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
     <body>
-        <script>
+    <script>
         update();
         </script>
     </body>

@@ -1,6 +1,6 @@
 
         <div>
-            <img src="project/img/team_pic.gif">
+            <img src="../img/team_pic.gif">
         </div>
         <div>
             <p align="center">
