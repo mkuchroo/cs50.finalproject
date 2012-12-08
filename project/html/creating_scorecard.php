@@ -7,7 +7,7 @@
     {
         //$temp_player = query("SELECT * FROM `players` WHERE name = ?", $_POST["harvard_name_1"]);
         //dump($_POST);
-       /* if (empty($_POST["date"]))
+        if (empty($_POST["date"]))
             apologize("Sorry! Please enter a date!");
         if (empty($_POST["toss"]))
             apologize("Sorry! Enter who won the toss!");
@@ -22,7 +22,7 @@
         || empty($_POST["player11"]))
             apologize("Sorry! You must provide a full 11 for the opposition as well as team name!");
             
-            */
+           
         
         if ($_POST["ground"] === "Harvard")
             query("INSERT INTO `games`(`date`, `home`, `away`, `toss`, `bat_first`,`progress`)

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
+<html>
 
-
+ <html>
 
     <head>
 
@@ -28,16 +29,6 @@
 
     <body>
     
-    
-    <!--ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-    <li><a tabindex="-1" href="about.php">About Cricket</a></li>
-    <li><a tabindex="-1" href="rules.php">Rules of Cricket</a></li>
-    <li><a tabindex="-1" href="team.php">Players</a></li>
-    <li><a tabindex="-1" href="scores.php">Past Games</a></li>
-    <li><a tabindex="-1" href="photos.php">Gallery</a></li>
-    <li><a tabindex="-1" href="involve.php">Get Involved</a></li>
-    <li><a tabindex="-1" href="login.php"><strong>Log In</strong>/a></li>
-    </ul-->
 
 <ul class="nav nav-pills">
     <li><a href="about.php">About Cricket</a></li>
@@ -52,4 +43,4 @@
     </body>
 
 
-</html>
+

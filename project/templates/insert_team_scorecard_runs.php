@@ -34,11 +34,11 @@
             <div class="control-group" style = "display:inline-block">
                     <select name="how_out_1.<?=$i?>" style = "width:80px">
                         <option value=""></option>
-                        <?echo '<option value="bowled">Bowled</option>';?>
-                        <?echo '<option value="caught">Caught</option>';?>
-                        <?echo '<option value="lbw">LBW</option>';?>
-                        <?echo '<option value="run_out">Run Out</option>';?>
-                        <?echo '<option value="hit_wicket">Hit Wicket</option>';?>
+                        <?echo '<option value="Bowled">Bowled</option>';?>
+                        <?echo '<option value="Caught">Caught</option>';?>
+                        <?echo '<option value="lbw">lbw</option>';?>
+                        <?echo '<option value="Run Out">Run Out</option>';?>
+                        <?echo '<option value="Hit Wicket">Hit Wicket</option>';?>
                     </select>
                 </div>
 
@@ -76,6 +76,10 @@
             </br>
             
             <?endfor?>
+            
+                <div class="control-group">
+                    <input class="input-mini" name="extras_1" placeholder="Extras" type="text"/>
+                </div>
             
             First Innings Bowling
             
@@ -140,7 +144,6 @@
 
             <div class="control-group" style = "display:inline-block">
                     <select name="how_out_2.<?=$i?>" style = "width:80px">
-                        <option value=""></option>
                         <?echo '<option value=></option>';?>
                         <?echo '<option value="bowled">Bowled</option>';?>
                         <?echo '<option value="caught">Caught</option>';?>
@@ -182,8 +185,12 @@
             </div>
             
             </br>
-            
+           
             <?endfor?>
+            
+                <div class="control-group">
+                    <input class="input-mini" name="extras_2" placeholder="Extras" type="text"/>
+                </div>
             
             Second Innings Bowling
             
