@@ -35,7 +35,7 @@
                 $_SESSION["id"] = $row["id"];
 
                 // redirect to portfolio
-                redirect("homepage_login.php");
+                redirect("index.php");
             }
             else
                 apologize("Sorry, username and password not registered");

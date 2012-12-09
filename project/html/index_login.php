@@ -3,7 +3,7 @@
     // configuration
         require("../includes/config.php"); 
 
-    // render portfolio
+    // render logged in homepage
     render("homepage_login.php");
 
 ?>

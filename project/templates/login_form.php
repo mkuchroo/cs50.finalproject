@@ -1,3 +1,4 @@
+<!--form for user to enter username and password to log in -->
 <form action="login.php" method="post">
     <fieldset>
         <div class="control-group">
