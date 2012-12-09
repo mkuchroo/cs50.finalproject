@@ -39,6 +39,8 @@
                         <?echo '<option value="lbw">lbw</option>';?>
                         <?echo '<option value="Run Out">Run Out</option>';?>
                         <?echo '<option value="Hit Wicket">Hit Wicket</option>';?>
+                        <?echo '<option value="Not Out">Not Out</option>';?>
+                        <?echo '<option value="Did Not Bat">Did Not Bat</option>';?>
                     </select>
                 </div>
 
@@ -144,12 +146,13 @@
 
             <div class="control-group" style = "display:inline-block">
                     <select name="how_out_2.<?=$i?>" style = "width:80px">
-                        <?echo '<option value=></option>';?>
-                        <?echo '<option value="bowled">Bowled</option>';?>
-                        <?echo '<option value="caught">Caught</option>';?>
-                        <?echo '<option value="lbw">LBW</option>';?>
-                        <?echo '<option value="run_out">Run Out</option>';?>
-                        <?echo '<option value="hit_wicket">Hit Wicket</option>';?>
+                        <?echo '<option value="Bowled">Bowled</option>';?>
+                        <?echo '<option value="Caught">Caught</option>';?>
+                        <?echo '<option value="lbw">lbw</option>';?>
+                        <?echo '<option value="Run Out">Run Out</option>';?>
+                        <?echo '<option value="Hit Wicket">Hit Wicket</option>';?>
+                        <?echo '<option value="Not Out">Not Out</option>';?>
+                        <?echo '<option value="Did Not Bat">Did Not Bat</option>';?>
                     </select>
                 </div>
 

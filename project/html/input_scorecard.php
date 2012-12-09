@@ -2,12 +2,11 @@
 
 //including required php files    
   require("../includes/config.php"); 
-    
     //dump($_POST);
     $games = query("SELECT * FROM `games` WHERE progress = ?", 0);
-    
-   //dump($games);
-    //query("UPDATE `games` SET `progress`=? WHERE game_id = ?", 1, $games[0]["game_id"]);
+    $game_num = $games[0]["game_id"];
+  // dump($games);
+    query("UPDATE `games` SET `progress`=? WHERE game_id = ?", 1, $games[0]["game_id"]);
     
     $harvard_team_temp = query("SELECT `player_name` FROM `scorecards` WHERE game_num = ? AND team = ?", $games[0]["game_id"], 'Harvard');
     $opposition_temp = query('SELECT `player_name` FROM `scorecards` WHERE game_num = ? AND team = ?', $games[0]["game_id"], 'Opposition');
@@ -29,14 +28,31 @@
         {
             for ($i = 0 ; $i < 11 ; $i++)
             {
+                echo $i;
+                $name = $harvard_team[$i];
+                $bat_pos =$_POST["bat_pos_1_$i"];
+                $run = $_POST["runs_1_$i"];
+                $ball = $_POST["balls_1_$i"];
+                $four = $_POST["4s_1_$i"];
+                $six = $_POST["6s_1_$i"];
+                $over = $_POST["bowl_overs_1_$i"];
+                $dot = $_POST["dots_1_$i"];
+                $run_given = $_POST["runs_given_1_$i"];
+                $wick = $_POST["wickets_1_$i"];
+                $out_bowl = $_POST["out_bowler_1_$i"];
+                $out_h = $_POST["how_out_1_$i"];
+                $bowl_num = $_POST["bowl_pos_1_$i"];
+                
+                $team = 'Harvard';
+                
                 query("UPDATE `scorecards` SET `bat_num`=?,`runs`=?, `balls`=?,`4s`=?,
                     `6s`=?,`overs`=?,`dots`=?,`runs_given`=?,`wickets`=?,`out_bowler`=?,
                     `out_how`=?, `bowl_num`=? WHERE player_name = ? AND
-                    game_num = ? AND team = ?", $_POST["bat_pos_1_$i"], $_POST["runs_1_$i"],
-                    $_POST["balls_1_$i"], $_POST["4s_1_$i"], $_POST["6s_1_$i"],
-                    $_POST["bowl_overs_1_$i"], $_POST["dots_1_$i"], $_POST["runs_given_1_$i"],
-                    $_POST["wickets_1_$i"] ,$_POST["out_bowler_1_$i"], $_POST["how_out_1_$i"], 
-                    $_POST["bowl_pos_1_$i"], $harvard_team[$i], $games[0]["game_id"], 'Harvard');
+                    game_num = ? AND team = ?", $bat_pos, $run,
+                    $ball, $four, $six,
+                    $over, $dot, $run_given,
+                    $wick ,$out_bowl, $out_h, 
+                    $bowl_num, $name, $game_num, $team);
                 
                 $player_stats = query("SELECT * FROM `players` WHERE `name` = ?", $harvard_team[$i]);
                 
@@ -70,12 +86,12 @@
                     $_POST["balls_2_$i"], $_POST["4s_2_$i"], $_POST["6s_2_$i"],
                     $_POST["bowl_overs_2_$i"], $_POST["dots_2_$i"], $_POST["runs_given_2_$i"],
                     $_POST["wickets_2_$i"] ,$_POST["out_bowler_2_$i"], $_POST["how_out_2_$i"], 
-                    $_POST["bowl_pos_2_$i"], $opposition[$i], $games[0]["game_id"], "Opposition");
+                    $_POST["bowl_pos_2_$i"], $opposition[$i], $game_num, "Opposition");
             }
                 query("INSERT INTO `scorecards`(`player_name`,`bat_num`, `runs`, `team`, `game_num`)
-                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_1"], 'Harvard', $games[0]["game_id"]);
+                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_1"], 'Harvard', $game_num);
                 query("INSERT INTO `scorecards`(`player_name`,`bat_num`, `runs`, `team`, `game_num`)
-                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_2"], 'Opposition', $games[0]["game_id"]);
+                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_2"], 'Opposition', $game_num);
         }
         
         else
@@ -89,7 +105,7 @@
                     $_POST["balls_1_$i"], $_POST["4s_1_$i"], $_POST["6s_21_$i"],
                     $_POST["bowl_overs_1_$i"], $_POST["dots_1_$i"], $_POST["runs_given_1_$i"],
                     $_POST["wickets_1_$i"] ,$_POST["out_bowler_1_$i"], $_POST["how_out_1_$i"], 
-                    $_POST["bowl_pos_1_$i"], $opposition[$i], $games[0]["game_id"], 'Opposition');
+                    $_POST["bowl_pos_1_$i"], $opposition[$i], $game_num, 'Opposition');
                     
                 $player_stats = query("SELECT * FROM `players` WHERE `name` = ?", $harvard_team[$i]);
                 
@@ -123,12 +139,12 @@
                     $_POST["balls_2_$i"], $_POST["4s_2_$i"], $_POST["6s_2_$i"],
                     $_POST["bowl_overs_2_$i"], $_POST["dots_2_$i"], $_POST["runs_given_2_$i"],
                     $_POST["wickets_2_$i"] ,$_POST["out_bowler_2_$i"], $_POST["how_out_2_$i"], 
-                    $_POST["bowl_pos_2_$i"], $harvard_team[$i], $games[0]["game_id"], "Harvard");
+                    $_POST["bowl_pos_2_$i"], $harvard_team[$i], $game_num, "Harvard");
             }
                 query("INSERT INTO `scorecards`(`player_name`,`bat_num`, `runs`, `team`, `game_num`)
-                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_2"], 'Harvard', $games[0]["game_id"]);
+                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_2"], 'Harvard', $game_num);
                 query("INSERT INTO `scorecards`(`player_name`,`bat_num`, `runs`, `team`, `game_num`)
-                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_1"], 'Opposition', $games[0]["game_id"]);
+                    VALUES (?,?,?,?,?)", 'extras', 12, $_POST["extras_1"], 'Opposition', $game_num);
         }
         redirect("/homepage_login.php");
     }

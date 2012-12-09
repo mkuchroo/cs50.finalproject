@@ -105,6 +105,8 @@
     {
         // SQL statement
         $sql = func_get_arg(0);
+        
+        //echo($sql);
 
         // parameters, if any
         $parameters = array_slice(func_get_args(), 1);

@@ -4,5 +4,5 @@
     require("../includes/config.php"); 
     
     // render form
-    render("involved_form.php", ["title" => "About"]);
+    render("involved_form.php");
 ?>
