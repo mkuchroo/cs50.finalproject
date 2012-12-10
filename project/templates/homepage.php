@@ -14,7 +14,8 @@
       }
    ?>
 </div>
-<!-- display slideshow on left side-->
+<img src ="../img/1885.jpg">
+<!-- display slideshow on left side>
 <div class="span8">
     <img name="foto" width = "400" height = "200" class = 'img-polaroid'>
     <script>

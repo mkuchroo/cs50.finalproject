@@ -1,5 +1,5 @@
 <!--create form to insert article headers and urls-->
-form action="insert_article.php" method="post">
+<form action="insert_article.php" method="post">
     <fieldset>
 
     <div id="top">

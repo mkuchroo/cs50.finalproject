@@ -102,7 +102,7 @@
                     `6s`=?,`overs`=?,`dots`=?,`runs_given`=?,`wickets`=?,`out_bowler`=?,
                     `out_how`=?, `bowl_num`=? WHERE player_name = ? AND
                     game_num = ? AND team = ?", $_POST["bat_pos_1_$i"], $_POST["runs_1_$i"],
-                    $_POST["balls_1_$i"], $_POST["4s_1_$i"], $_POST["6s_21_$i"],
+                    $_POST["balls_1_$i"], $_POST["4s_1_$i"], $_POST["6s_1_$i"],
                     $_POST["bowl_overs_1_$i"], $_POST["dots_1_$i"], $_POST["runs_given_1_$i"],
                     $_POST["wickets_1_$i"] ,$_POST["out_bowler_1_$i"], $_POST["how_out_1_$i"], 
                     $_POST["bowl_pos_1_$i"], $opposition[$i], $game_num, 'Opposition');
